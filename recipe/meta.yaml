@@ -15,8 +15,9 @@ source:
   sha256: 5ac3aac03706fbff0d43459c3d83d76f757b4804ba298824715e22b323a37ff6
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
 
   rpaths:
     - lib/R/lib/
@@ -44,8 +45,7 @@ about:
     or 'git' repositories. This package is a lightweight replacement of the 'install_*'
     functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
