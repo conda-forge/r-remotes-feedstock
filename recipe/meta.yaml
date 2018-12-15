@@ -1,5 +1,4 @@
-{% set version = '2.0.1' %}
-
+{% set version = '2.0.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,28 +7,24 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: remotes_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/remotes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/remotes/remotes_{{ version }}.tar.gz
-  sha256: 5ac3aac03706fbff0d43459c3d83d76f757b4804ba298824715e22b323a37ff6
+  sha256: aab33b1d1ec24a1a7656c3b2c9ec69227b24ab01163bd9348da1e4cb61ed5267
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 1000
-
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
 
   host:
     - r-base
-
   run:
     - r-base
 
@@ -45,7 +40,7 @@ about:
     or 'git' repositories. This package is a lightweight replacement of the 'install_*'
     functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
@@ -55,3 +50,25 @@ extra:
     - jdblischak
     - cbrueffer
     - dbast
+
+# Package: remotes
+# Title: R Package Installation from Remote Repositories, Including 'GitHub'
+# Version: 2.0.2
+# Authors@R: c( person("Gabor", "Csardi", , "csardi.gabor@gmail.com", role = c("aut", "cre")), person("Hadley", "Wickham", role = c("aut")), person("Winston", "Chang", role = "aut"), person("Jim", "Hester", role = "aut"), person("RStudio", role = "cph"), person("Martin", "Morgan", role = "aut"), person("Dan", "Tenenbaum", role = "aut"), person("Mango Solutions", role = "cph") )
+# Description: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories. This package is a lightweight replacement of the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
+# License: GPL (>= 2)
+# URL: https://github.com/r-lib/remotes#readme
+# BugReports: https://github.com/r-lib/remotes/issues
+# Imports: methods, utils
+# Suggests: curl, covr, git2r (>= 0.23.0), knitr, mockery, pkgbuild (>= 1.0.1), pingr, rmarkdown, testthat, withr
+# Depends: R (>= 3.0.0)
+# VignetteBuilder: knitr
+# RoxygenNote: 6.1.0
+# SystemRequirements: Subversion for install_svn, git for install_git
+# Encoding: UTF-8
+# NeedsCompilation: no
+# Packaged: 2018-10-30 10:46:53 UTC; gaborcsardi
+# Author: Gabor Csardi [aut, cre], Hadley Wickham [aut], Winston Chang [aut], Jim Hester [aut], RStudio [cph], Martin Morgan [aut], Dan Tenenbaum [aut], Mango Solutions [cph]
+# Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
+# Repository: CRAN
+# Date/Publication: 2018-10-30 11:30:10 UTC
