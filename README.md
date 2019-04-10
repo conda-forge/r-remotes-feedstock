@@ -7,7 +7,7 @@ Package license: GPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories. This package is a lightweight replacement of the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
+Summary: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories. This package provides the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
 
 
 
@@ -115,10 +115,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 
