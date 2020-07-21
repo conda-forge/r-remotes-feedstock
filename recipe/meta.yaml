@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/remotes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/remotes/remotes_{{ version }}.tar.gz
-  sha256: 4e590746fce618094089372b185e1ea234b3337b23c44c44118e942d0fb5118b
+  sha256: 12f234fd8c46f4ac54e06a3c60e4015ed2193a32762ca4dd6854f120136f33b8
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,11 +36,9 @@ test:
 about:
   home: https://github.com/r-lib/remotes#readme
   license: GPL (>= 2)
-  summary: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion'
-    or 'git' repositories. This package provides the 'install_*' functions in 'devtools'.
-    Indeed most of the code was copied over from 'devtools'.
+  summary: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories. This package provides the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
