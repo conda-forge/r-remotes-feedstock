@@ -5,7 +5,7 @@ Home: https://github.com/r-lib/remotes#readme
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Download and install R packages stored in 'GitHub', 'BitBucket', or plain 'subversion' or 'git' repositories. This package provides the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.
 
