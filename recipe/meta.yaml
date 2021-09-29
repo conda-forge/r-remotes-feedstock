@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/remotes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/remotes/remotes_{{ version }}.tar.gz
-  sha256: cde5c3e44f67eba5f9bb8ea72e04ed372649178cb036479e1387eac92b8c1411
+  sha256: d5d777b2e10d70fd0670166d539eab88ec4f7fe030f54ec5cd2703f548473276
 
 build:
   merge_build_host: true  # [win]
